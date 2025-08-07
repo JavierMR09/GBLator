@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\cpu\\cpu.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\cpu\\cpu.cpp",
+  "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/cpu/cpu.cpp",
+  "output": "CMakeFiles/gblator.dir/src/cpu/cpu.cpp.obj"
+},
+{
+  "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\main.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\main.cpp",
+  "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/main.cpp",
+  "output": "CMakeFiles/gblator.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\mmu\\memory.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\mmu\\memory.cpp",
+  "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/mmu/memory.cpp",
+  "output": "CMakeFiles/gblator.dir/src/mmu/memory.cpp.obj"
+}
+]
