@@ -15,5 +15,15 @@ file(GLOB_RECURSE GBLATOR_SOURCES
 # Define the executable target
 add_executable(gblator ${GBLATOR_SOURCES})
 
+# Build tests
+file(GLOB GBLATOR_TEST_SOURCES
+     ${CMAKE_SOURCE_DIR}/tests/test_*.cpp)
+if(GBLATOR_TEST_SOURCES)
+    add_executable(gblator_tests ${GBLATOR_SOURCES} ${GBLATOR_TEST_SOURCES})
+    # Enable CTest if available
+    enable_testing()
+    add_test(NAME gblator_unit_tests COMMAND gblator_tests)
+endif()
+
 # In the future you may choose to break the emulator into libraries
 # and link them here.

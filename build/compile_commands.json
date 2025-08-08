@@ -1,9 +1,21 @@
 [
 {
   "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\apu\\apu.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\apu\\apu.cpp",
+  "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/apu/apu.cpp",
+  "output": "CMakeFiles/gblator.dir/src/apu/apu.cpp.obj"
+},
+{
+  "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\cpu\\cpu.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\cpu\\cpu.cpp",
   "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/cpu/cpu.cpp",
   "output": "CMakeFiles/gblator.dir/src/cpu/cpu.cpp.obj"
+},
+{
+  "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\joypad\\joypad.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\joypad\\joypad.cpp",
+  "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/joypad/joypad.cpp",
+  "output": "CMakeFiles/gblator.dir/src/joypad/joypad.cpp.obj"
 },
 {
   "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
@@ -16,5 +28,17 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\mmu\\memory.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\mmu\\memory.cpp",
   "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/mmu/memory.cpp",
   "output": "CMakeFiles/gblator.dir/src/mmu/memory.cpp.obj"
+},
+{
+  "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\ppu\\ppu.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\ppu\\ppu.cpp",
+  "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/ppu/ppu.cpp",
+  "output": "CMakeFiles/gblator.dir/src/ppu/ppu.cpp.obj"
+},
+{
+  "directory": "C:/Users/mvton/GBLator_Project_Folder/GBLator/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/gblator.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\gblator.dir\\src\\utils\\timer.cpp.obj -c C:\\Users\\mvton\\GBLator_Project_Folder\\GBLator\\src\\utils\\timer.cpp",
+  "file": "C:/Users/mvton/GBLator_Project_Folder/GBLator/src/utils/timer.cpp",
+  "output": "CMakeFiles/gblator.dir/src/utils/timer.cpp.obj"
 }
 ]

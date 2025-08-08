@@ -128,6 +128,30 @@ gblator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/build
 .PHONY : gblator/fast
 
+src/apu/apu.obj: src/apu/apu.cpp.obj
+.PHONY : src/apu/apu.obj
+
+# target to build an object file
+src/apu/apu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/apu/apu.cpp.obj
+.PHONY : src/apu/apu.cpp.obj
+
+src/apu/apu.i: src/apu/apu.cpp.i
+.PHONY : src/apu/apu.i
+
+# target to preprocess a source file
+src/apu/apu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/apu/apu.cpp.i
+.PHONY : src/apu/apu.cpp.i
+
+src/apu/apu.s: src/apu/apu.cpp.s
+.PHONY : src/apu/apu.s
+
+# target to generate assembly for a file
+src/apu/apu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/apu/apu.cpp.s
+.PHONY : src/apu/apu.cpp.s
+
 src/cpu/cpu.obj: src/cpu/cpu.cpp.obj
 .PHONY : src/cpu/cpu.obj
 
@@ -151,6 +175,30 @@ src/cpu/cpu.s: src/cpu/cpu.cpp.s
 src/cpu/cpu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/cpu/cpu.cpp.s
 .PHONY : src/cpu/cpu.cpp.s
+
+src/joypad/joypad.obj: src/joypad/joypad.cpp.obj
+.PHONY : src/joypad/joypad.obj
+
+# target to build an object file
+src/joypad/joypad.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/joypad/joypad.cpp.obj
+.PHONY : src/joypad/joypad.cpp.obj
+
+src/joypad/joypad.i: src/joypad/joypad.cpp.i
+.PHONY : src/joypad/joypad.i
+
+# target to preprocess a source file
+src/joypad/joypad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/joypad/joypad.cpp.i
+.PHONY : src/joypad/joypad.cpp.i
+
+src/joypad/joypad.s: src/joypad/joypad.cpp.s
+.PHONY : src/joypad/joypad.s
+
+# target to generate assembly for a file
+src/joypad/joypad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/joypad/joypad.cpp.s
+.PHONY : src/joypad/joypad.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -200,6 +248,54 @@ src/mmu/memory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/mmu/memory.cpp.s
 .PHONY : src/mmu/memory.cpp.s
 
+src/ppu/ppu.obj: src/ppu/ppu.cpp.obj
+.PHONY : src/ppu/ppu.obj
+
+# target to build an object file
+src/ppu/ppu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/ppu/ppu.cpp.obj
+.PHONY : src/ppu/ppu.cpp.obj
+
+src/ppu/ppu.i: src/ppu/ppu.cpp.i
+.PHONY : src/ppu/ppu.i
+
+# target to preprocess a source file
+src/ppu/ppu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/ppu/ppu.cpp.i
+.PHONY : src/ppu/ppu.cpp.i
+
+src/ppu/ppu.s: src/ppu/ppu.cpp.s
+.PHONY : src/ppu/ppu.s
+
+# target to generate assembly for a file
+src/ppu/ppu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/ppu/ppu.cpp.s
+.PHONY : src/ppu/ppu.cpp.s
+
+src/utils/timer.obj: src/utils/timer.cpp.obj
+.PHONY : src/utils/timer.obj
+
+# target to build an object file
+src/utils/timer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/utils/timer.cpp.obj
+.PHONY : src/utils/timer.cpp.obj
+
+src/utils/timer.i: src/utils/timer.cpp.i
+.PHONY : src/utils/timer.i
+
+# target to preprocess a source file
+src/utils/timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/utils/timer.cpp.i
+.PHONY : src/utils/timer.cpp.i
+
+src/utils/timer.s: src/utils/timer.cpp.s
+.PHONY : src/utils/timer.s
+
+# target to generate assembly for a file
+src/utils/timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gblator.dir\build.make CMakeFiles/gblator.dir/src/utils/timer.cpp.s
+.PHONY : src/utils/timer.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -209,15 +305,27 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... gblator
+	@echo ... src/apu/apu.obj
+	@echo ... src/apu/apu.i
+	@echo ... src/apu/apu.s
 	@echo ... src/cpu/cpu.obj
 	@echo ... src/cpu/cpu.i
 	@echo ... src/cpu/cpu.s
+	@echo ... src/joypad/joypad.obj
+	@echo ... src/joypad/joypad.i
+	@echo ... src/joypad/joypad.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
 	@echo ... src/mmu/memory.obj
 	@echo ... src/mmu/memory.i
 	@echo ... src/mmu/memory.s
+	@echo ... src/ppu/ppu.obj
+	@echo ... src/ppu/ppu.i
+	@echo ... src/ppu/ppu.s
+	@echo ... src/utils/timer.obj
+	@echo ... src/utils/timer.i
+	@echo ... src/utils/timer.s
 .PHONY : help
 
 
