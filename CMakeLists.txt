@@ -1,29 +1,23 @@
-cmake_minimum_required(VERSION 3.12)
-project(GBLator LANGUAGES CXX)
-
-# Use C++17 for this project
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# Add include directory so that headers can be found when building
-include_directories(${CMAKE_SOURCE_DIR}/include)
-
-# Gather all source files recursively
+# At the top of the file, after setting the C++ standard:
 file(GLOB_RECURSE GBLATOR_SOURCES
      ${CMAKE_SOURCE_DIR}/src/*.cpp)
 
-# Define the executable target
-add_executable(gblator ${GBLATOR_SOURCES})
+# Exclude main.cpp from the library sources
+list(FILTER GBLATOR_SOURCES EXCLUDE REGEX ".*/main\\.cpp$")
 
-# Build tests
-file(GLOB GBLATOR_TEST_SOURCES
-     ${CMAKE_SOURCE_DIR}/tests/test_*.cpp)
+# Build the core emulator library
+add_library(gblator_lib ${GBLATOR_SOURCES})
+target_include_directories(gblator_lib PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
+# Build the emulator executable from the library plus main.cpp
+add_executable(gblator src/main.cpp)
+target_link_libraries(gblator PRIVATE gblator_lib)
+
+# Build tests: link the library and your test file(s)
+file(GLOB GBLATOR_TEST_SOURCES ${CMAKE_SOURCE_DIR}/tests/test_*.cpp)
 if(GBLATOR_TEST_SOURCES)
-    add_executable(gblator_tests ${GBLATOR_SOURCES} ${GBLATOR_TEST_SOURCES})
-    # Enable CTest if available
+    add_executable(gblator_tests ${GBLATOR_TEST_SOURCES})
+    target_link_libraries(gblator_tests PRIVATE gblator_lib)
     enable_testing()
     add_test(NAME gblator_unit_tests COMMAND gblator_tests)
 endif()
-
-# In the future you may choose to break the emulator into libraries
-# and link them here.

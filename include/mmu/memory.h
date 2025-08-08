@@ -76,6 +76,25 @@ public:
     void writeByte(uint16_t address, uint8_t value);
 
     /**
+     * @brief Increment the divider (DIV) register.
+     *
+     * The timer uses this method to increment the DIV register (FF04)
+     * without resetting it. According to the Game Boy hardware, writes to
+     * FF04 by the CPU reset the register to zero【487600738692240†L125-L171】, but the timer
+     * increments it internally. This method updates the divider while
+     * preserving that behaviour.
+     */
+    void incrementDIV();
+
+    /**
+     * @brief Reset the divider (DIV) register to zero.
+     *
+     * This is called when the CPU writes to 0xFF04. It clears the
+     * divider register without affecting timer state.
+     */
+    void resetDIV();
+
+    /**
      * @brief Load a ROM file into memory.
      *
      * Reads the entire file into the internal ROM buffer, parses

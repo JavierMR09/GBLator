@@ -36,13 +36,12 @@ int Timer::timerPeriod() const {
 }
 
 void Timer::step(int cycles) {
-    // Update divider; increments at 16384 Hz => 256 cycles per increment
+    // Update divider; increments at 16384 Hz => 256 cycles per increment【487600738692240†L125-L171】
     divCounter_ += cycles;
     while (divCounter_ >= 256) {
         divCounter_ -= 256;
-        uint8_t div = memory_.readByte(0xFF04);
-        div = static_cast<uint8_t>(div + 1);
-        memory_.writeByte(0xFF04, div);
+        // Increment DIV register via memory helper to avoid resetting it
+        memory_.incrementDIV();
     }
 
     // Update TIMA if timer enabled

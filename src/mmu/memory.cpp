@@ -325,8 +325,8 @@ void Memory::writeByte(uint16_t address, uint8_t value) {
         uint8_t index = static_cast<uint8_t>(address - 0xFF00);
         switch (address) {
         case 0xFF04:
-            // DIV register: writing resets to 0
-            ioRegisters_[index] = 0;
+            // DIV register: writing resets to 0 regardless of value
+            resetDIV();
             break;
         case 0xFF00:
             // Joypad input (P1): lower 4 bits reflect button states; just store for now
@@ -376,4 +376,22 @@ void Memory::writeByte(uint16_t address, uint8_t value) {
     }
 }
 
+// -----------------------------------------------------------------------------
+// Divider register helpers
+//
+// The divider register (FF04) increments internally at 16384 Hz (every 256 CPU
+// cycles) and resets to zero when written to by the CPU【487600738692240†L125-L171】.
+// The timer calls incrementDIV() to update the register without triggering
+// a reset. When the CPU writes to FF04 via Memory::writeByte, resetDIV() is
+// invoked instead.
+
+void Memory::incrementDIV() {
+    // The DIV register is mapped at FF04; its index in ioRegisters_ is 0x04.
+    ioRegisters_[0x04] = static_cast<uint8_t>(ioRegisters_[0x04] + 1);
+}
+
+void Memory::resetDIV() {
+    // Reset the DIV register to zero. This is called when the CPU writes to FF04.
+    ioRegisters_[0x04] = 0;
+}
 } // namespace gblator
