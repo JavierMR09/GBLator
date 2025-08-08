@@ -1,3 +1,5 @@
 C:/Users/mvton/GBLator_Project_Folder/GBLator/build/CMakeFiles/gblator.dir
+C:/Users/mvton/GBLator_Project_Folder/GBLator/build/CMakeFiles/gblator_tests.dir
+C:/Users/mvton/GBLator_Project_Folder/GBLator/build/CMakeFiles/RUN_TESTS.dir
 C:/Users/mvton/GBLator_Project_Folder/GBLator/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/mvton/GBLator_Project_Folder/GBLator/build/CMakeFiles/ZERO_CHECK.dir
