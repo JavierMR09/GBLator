@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.30)
+
 # At the top of the file, after setting the C++ standard:
 file(GLOB_RECURSE GBLATOR_SOURCES
      ${CMAKE_SOURCE_DIR}/src/*.cpp)
